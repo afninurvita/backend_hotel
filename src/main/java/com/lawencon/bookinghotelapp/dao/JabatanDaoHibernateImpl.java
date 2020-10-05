@@ -2,19 +2,19 @@ package com.lawencon.bookinghotelapp.dao;
 
 import java.util.List;
 
-import com.lawencon.bookinghotelapp.model.Jabatan;
+import com.lawencon.bookinghotelapp.model.Roles;
 
 public class JabatanDaoHibernateImpl extends BaseDao implements JabatanDao {
 
 	@Override
-	public Jabatan insert(Jabatan data) throws Exception {
+	public Roles insert(Roles data) throws Exception {
 		// TODO Auto-generated method stub
 		em.persist(data);
 		return data;
 	}
 
 	@Override
-	public List<Jabatan> getListJabatan() throws Exception {
+	public List<Roles> getListJabatan() throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -26,7 +26,7 @@ public class JabatanDaoHibernateImpl extends BaseDao implements JabatanDao {
 	}
 
 	@Override
-	public Jabatan update(Jabatan data) throws Exception {
+	public Roles update(Roles data) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}

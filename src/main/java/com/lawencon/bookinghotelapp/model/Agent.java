@@ -18,7 +18,7 @@ public class Agent {
 	
 	@ManyToOne
 	@JoinColumn(name = "id_user")
-	private User idUser;
+	private Users idUser;
 	
 	private String nama;
 	private String nip;
@@ -38,10 +38,10 @@ public class Agent {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public User getIdUser() {
+	public Users getIdUser() {
 		return idUser;
 	}
-	public void setIdUser(User idUser) {
+	public void setIdUser(Users idUser) {
 		this.idUser = idUser;
 	}
 	public String getNama() {

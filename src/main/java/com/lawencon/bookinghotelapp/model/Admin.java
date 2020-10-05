@@ -18,7 +18,7 @@ public class Admin {
 	
 	@ManyToOne
 	@JoinColumn(name = "id_user")
-	private User idUser;
+	private Users idUser;
 	
 	private String nip;
 	private String nomorktp;
@@ -36,11 +36,11 @@ public class Admin {
 		this.id = id;
 	}
 
-	public User getIdUser() {
+	public Users getIdUser() {
 		return idUser;
 	}
 
-	public void setIdUser(User idUser) {
+	public void setIdUser(Users idUser) {
 		this.idUser = idUser;
 	}
 

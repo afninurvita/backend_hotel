@@ -1,5 +1,8 @@
 package com.lawencon.bookinghotelapp.model;
 
+import java.util.UUID;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,25 +11,32 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.sun.istack.NotNull;
+
 @Entity
-@Table(name = "tb_m_user")
-public class User {
+@Table(name = "tb_m_users")
+public class Users {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private String id =UUID.randomUUID().toString();
+	
+	@NotNull
+	@Column(name ="user_name", nullable = false)
 	private String username;
+	
+	@NotNull
+	@Column(nullable = false)
 	private String psword;
 	
 	@ManyToOne
-	@JoinColumn(name = "id_jabatan")
-	private Jabatan jabatanId;
+	@JoinColumn(name = "id_role")
+	private Roles idRole;
 
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -46,12 +56,12 @@ public class User {
 		this.psword = psword;
 	}
 
-	public Jabatan getJabatanId() {
-		return jabatanId;
+	public Roles getIdRole() {
+		return idRole;
 	}
 
-	public void setJabatanId(Jabatan jabatanId) {
-		this.jabatanId = jabatanId;
+	public void setJabatanId(Roles idRole) {
+		this.idRole = idRole;
 	}
 
 	

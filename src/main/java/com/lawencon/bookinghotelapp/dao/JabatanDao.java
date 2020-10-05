@@ -2,16 +2,16 @@ package com.lawencon.bookinghotelapp.dao;
 
 import java.util.List;
 
-import com.lawencon.bookinghotelapp.model.Jabatan;
+import com.lawencon.bookinghotelapp.model.Roles;
 
 public interface JabatanDao {
 	
-	Jabatan insert(Jabatan data) throws Exception;
+	Roles insert(Roles data) throws Exception;
 	
-	List<Jabatan> getListJabatan() throws Exception;
+	List<Roles> getListJabatan() throws Exception;
 	
 	void delete(Long id) throws Exception;
 	
-	Jabatan update(Jabatan data) throws Exception;
+	Roles update(Roles data) throws Exception;
 	
 }
