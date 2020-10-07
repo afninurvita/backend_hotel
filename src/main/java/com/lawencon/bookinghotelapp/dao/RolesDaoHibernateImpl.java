@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.lawencon.bookinghotelapp.model.Roles;
 
-public class JabatanDaoHibernateImpl extends BaseDao implements JabatanDao {
+public class RolesDaoHibernateImpl extends BaseDao implements RolesDao {
 
 	@Override
 	public Roles insert(Roles data) throws Exception {

@@ -1,5 +1,7 @@
 package com.lawencon.bookinghotelapp.model;
 
+import java.util.UUID;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,24 +11,23 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tb_m_kamar")
-public class Kamar {
+@Table(name = "tb_m_rooms")
+public class Rooms {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private String id = UUID.randomUUID().toString();
 	
 	@ManyToOne
 	@JoinColumn(name = "id_hotel")
 	private Hotel idHotel;
 	
-	private String tipeKamar;
+	private String roomType;
 
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -38,13 +39,12 @@ public class Kamar {
 		this.idHotel = idHotel;
 	}
 
-	public String getTipeKamar() {
-		return tipeKamar;
+	public String getRoomType() {
+		return roomType;
 	}
 
-	public void setTipeKamar(String tipeKamar) {
-		this.tipeKamar = tipeKamar;
+	public void setRoomType(String roomType) {
+		this.roomType = roomType;
 	}
-	
 	
 }
