@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.lawencon.bookinghotelapp.model.Roles;
 
-public interface RolesDao {
+public interface RolesDao extends GenericDao<Roles>{
 	
 	Roles insert(Roles data) throws Exception;
 	

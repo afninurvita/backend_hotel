@@ -7,11 +7,10 @@ import org.springframework.stereotype.Repository;
 import com.lawencon.bookinghotelapp.model.Roles;
 
 @Repository
-public class RolesDaoHibernateImpl extends BaseDao implements RolesDao {
+public class RolesDaoHibernateImpl extends BaseDao<Roles> implements RolesDao {
 
 	@Override
 	public Roles insert(Roles data) throws Exception {
-		// TODO Auto-generated method stub
 		em.persist(data);
 		return data;
 	}

@@ -1,9 +1,9 @@
 package com.lawencon.bookinghotelapp.model;
 
+import java.util.UUID;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -14,8 +14,7 @@ import com.sun.istack.NotNull;
 public class Cities {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private String id = UUID.randomUUID().toString();
 	
 	@NotNull
 	@Column(nullable = false, unique = true)
@@ -23,11 +22,11 @@ public class Cities {
 	
 	private String name;
 	
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
 	
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	
