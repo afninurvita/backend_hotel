@@ -8,7 +8,7 @@ public interface RolesDao {
 	
 	Roles insert(Roles data) throws Exception;
 	
-	List<Roles> getListJabatan() throws Exception;
+	List<Roles> getListRoles() throws Exception;
 	
 	void delete(Long id) throws Exception;
 	
