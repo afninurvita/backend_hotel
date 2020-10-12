@@ -1,20 +1,15 @@
 package com.lawencon.bookinghotelapp.model;
 
 import java.util.Date;
-import java.util.UUID;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_r_transaction_details")
-public class TransactionDetails {
-
-	@Id
-	private String id = UUID.randomUUID().toString();
+public class TransactionDetails extends BaseModel{
 	
 	@ManyToOne
 	@JoinColumn(name = "id_header")
@@ -26,14 +21,6 @@ public class TransactionDetails {
 	
 	private Date checkInDate;
 	private Date checkOutDate;
-	
-	public String getId() {
-		return id;
-	}
-	
-	public void setId(String id) {
-		this.id = id;
-	}
 	
 	public TransactionHeaders getIdHeader() {
 		return idHeader;

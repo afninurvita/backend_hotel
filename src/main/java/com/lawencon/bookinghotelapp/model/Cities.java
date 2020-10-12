@@ -1,34 +1,20 @@
 package com.lawencon.bookinghotelapp.model;
 
-import java.util.UUID;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.sun.istack.NotNull;
 
 @Entity
 @Table(name = "tb_m_cities")
-public class Cities {
-	
-	@Id
-	private String id = UUID.randomUUID().toString();
+public class Cities extends BaseModel{
 	
 	@NotNull
 	@Column(nullable = false, unique = true)
 	private String code;
 	
 	private String name;
-	
-	public String getId() {
-		return id;
-	}
-	
-	public void setId(String id) {
-		this.id = id;
-	}
 	
 	public String getCode() {
 		return code;

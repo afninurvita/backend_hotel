@@ -1,12 +1,7 @@
 package com.lawencon.bookinghotelapp.model;
 
-import java.util.UUID;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -15,10 +10,7 @@ import com.sun.istack.NotNull;
 
 @Entity
 @Table(name = "tb_m_hotels")
-public class Hotel {
-	
-	@Id
-	private String id = UUID.randomUUID().toString();
+public class Hotel extends BaseModel{
 	
 	@ManyToOne
 	@JoinColumn(name = "id_city")
@@ -30,14 +22,6 @@ public class Hotel {
 	
 	private String name;
 	
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
 	public Cities getIdCity() {
 		return idCity;
 	}

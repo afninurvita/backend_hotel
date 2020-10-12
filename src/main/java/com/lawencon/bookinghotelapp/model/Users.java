@@ -1,10 +1,7 @@
 package com.lawencon.bookinghotelapp.model;
 
-import java.util.UUID;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -13,10 +10,7 @@ import com.sun.istack.NotNull;
 
 @Entity
 @Table(name = "tb_m_users")
-public class Users {
-	
-	@Id
-	private String id =UUID.randomUUID().toString();
+public class Users extends BaseModel{
 	
 	@NotNull
 	@Column(name ="user_name", nullable = false)
@@ -29,14 +23,6 @@ public class Users {
 	@ManyToOne
 	@JoinColumn(name = "id_role")
 	private Roles idRole;
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
 
 	public String getUsername() {
 		return username;
